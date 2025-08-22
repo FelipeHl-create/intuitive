@@ -1,0 +1,53 @@
+{
+  "name": "intuitive-portfolio",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal interativo com efeito parallax e foco em segurança",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx,ts,tsx",
+    "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "gsap": "^3.12.2",
+    "react-router-dom": "^6.8.1",
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "express-validator": "^7.0.1",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.10.9",
+    "@types/cors": "^2.8.17",
+    "@vitejs/plugin-react": "^4.1.1",
+    "vite": "^5.0.0",
+    "eslint": "^8.54.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4"
+  },
+  "keywords": [
+    "portfolio",
+    "parallax",
+    "react",
+    "gsap",
+    "security"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}
