@@ -110,7 +110,7 @@ const Hero = () => {
           {/* Texto principal */}
           <div className="hero-text" ref={textRef}>
             <h1 className="hero-title">
-              <span className="title-line">Desenvolvedor de</span>
+              <span className="title-line">Engenheiro de</span>
               <span className="title-line highlight">Software</span>
             </h1>
           </div>

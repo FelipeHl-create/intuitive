@@ -54,14 +54,20 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       const token = localStorage.getItem('authToken')
-      if (token) {
+      const userData = localStorage.getItem('userData')
+      
+      if (token && userData) {
         try {
-          const response = await axios.get('/api/auth/verify', {
-            headers: { Authorization: `Bearer ${token}` }
-          })
-          setUser(response.data.user)
+          // Verificar se o token é válido (simulação)
+          if (token.startsWith('mock_jwt_token_')) {
+            setUser(JSON.parse(userData))
+          } else {
+            localStorage.removeItem('authToken')
+            localStorage.removeItem('userData')
+          }
         } catch (error) {
           localStorage.removeItem('authToken')
+          localStorage.removeItem('userData')
         }
       }
       setLoading(false)
@@ -73,16 +79,35 @@ export const AuthProvider = ({ children }) => {
   const login = async (credentials) => {
     try {
       setError(null)
-      const response = await axios.post('/api/auth/login', credentials)
-      const { token, user: userData } = response.data
       
-      // Armazenar token de forma segura
-      localStorage.setItem('authToken', token)
-      setUser(userData)
+      // Credenciais do admin (em produção, isso viria de uma API segura)
+      const ADMIN_EMAIL = 'master@gmail.com'
+      const ADMIN_PASSWORD = 'm@ster6470'
       
-      return { success: true }
+      // Verificar credenciais
+      if (credentials.username === ADMIN_EMAIL && credentials.password === ADMIN_PASSWORD) {
+        // Simular token JWT
+        const token = 'mock_jwt_token_' + Date.now()
+        const userData = {
+          id: 1,
+          email: ADMIN_EMAIL,
+          name: 'Felipe Hidalgo',
+          role: 'admin'
+        }
+        
+        // Armazenar token de forma segura
+        localStorage.setItem('authToken', token)
+        localStorage.setItem('userData', JSON.stringify(userData))
+        setUser(userData)
+        
+        return { success: true }
+      } else {
+        const errorMessage = 'Email ou senha incorretos'
+        setError(errorMessage)
+        return { success: false, error: errorMessage }
+      }
     } catch (error) {
-      const errorMessage = error.response?.data?.message || 'Erro ao fazer login'
+      const errorMessage = 'Erro ao fazer login'
       setError(errorMessage)
       return { success: false, error: errorMessage }
     }
@@ -90,6 +115,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('authToken')
+    localStorage.removeItem('userData')
     setUser(null)
     setError(null)
   }

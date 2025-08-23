@@ -158,7 +158,27 @@
 }
 
 .icon {
-  font-size: 1.3rem;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Cores específicas para cada rede social */
+.social-icon[title="GitHub"]:hover .icon {
+  fill: #333;
+}
+
+.social-icon[title="LinkedIn"]:hover .icon {
+  fill: #0077b5;
+}
+
+.social-icon[title="Instagram"]:hover .icon {
+  fill: #e4405f;
+}
+
+.social-icon[title="WhatsApp"]:hover .icon {
+  fill: #25d366;
 }
 
 /* Formulário de contato */

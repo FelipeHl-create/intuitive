@@ -47,7 +47,7 @@ const Navigation = () => {
         {/* Logo */}
         <div className="nav-logo">
           <Link to="/" className="logo-link">
-            <span className="logo-text">Portfolio</span>
+            <span className="logo-text">Intuitive Portfolio</span>
           </Link>
         </div>
 

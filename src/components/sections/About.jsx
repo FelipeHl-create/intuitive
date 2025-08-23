@@ -105,11 +105,11 @@ const About = () => {
             {/* Estatísticas */}
             <div className="about-stats" ref={statsRef}>
               <div className="stat-item parallax-element">
-                <div className="stat-number" data-value="5">0</div>
+                <div className="stat-number" data-value="2">0</div>
                 <div className="stat-label">Anos de Experiência</div>
               </div>
               <div className="stat-item parallax-element">
-                <div className="stat-number" data-value="50">0</div>
+                <div className="stat-number" data-value="5">0</div>
                 <div className="stat-label">Projetos Concluídos</div>
               </div>
               <div className="stat-item parallax-element">
@@ -153,10 +153,14 @@ const About = () => {
 
           {/* Botão de ação */}
           <div className="about-cta">
-            <button className="about-button">
+            <a 
+              href="/curriculo.pdf" 
+              download="CurrículoFelipeHidalgo.pdf"
+              className="about-button"
+            >
               <span className="button-text">Baixar CV</span>
               <span className="button-icon">📄</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
