@@ -98,8 +98,8 @@ const Hero = () => {
           <div className="hero-image-container" ref={imageRef}>
             <div className="hero-image-wrapper">
               <img 
-                src="/profile-image.jpg" 
-                alt="Desenvolvedor de Software" 
+                src="./profile-image.jpg" 
+                alt="Engenheiro de Software" 
                 className="hero-image"
               />
               <div className="image-overlay"></div>

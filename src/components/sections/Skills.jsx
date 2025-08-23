@@ -160,11 +160,11 @@ const Skills = () => {
             <div className="stat-label">Tecnologias Dominadas</div>
           </div>
           <div className="stat-item parallax-element">
-            <div className="stat-number">5+</div>
+            <div className="stat-number">2</div>
             <div className="stat-label">Anos de Experiência</div>
           </div>
           <div className="stat-item parallax-element">
-            <div className="stat-number">50+</div>
+            <div className="stat-number">5</div>
             <div className="stat-label">Projetos Concluídos</div>
           </div>
           <div className="stat-item parallax-element">
