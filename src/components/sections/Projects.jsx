@@ -20,13 +20,13 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Sistema de Gestão",
+      title: "VectraDex",
       category: "web",
-      description: "Sistema completo de gestão empresarial com dashboard interativo, relatórios em tempo real e controle de acesso baseado em roles.",
-      technologies: ["Vue.js", "Python", "Django", "Redis"],
+      description: "Sistema de gestão de produção e estoque com FastAPI + SQLite, interface server-rendered com Jinja2 e estilo moderno. Inclui cadastro e controle de produtos, monitoramento de máquinas, emissão de etiquetas e dashboards.",
+      technologies: ["Python", "FastAPI", "SQLite", "Jinja2"],
       image: "/project2.jpg",
       link: "#",
-      github: "#"
+      github: "https://github.com/FelipeHl-create/VectraDex"
     },
     {
       id: 3,
