@@ -24,7 +24,7 @@ const Projects = () => {
       category: "web",
       description: "Sistema de gestão de produção e estoque com FastAPI + SQLite, interface server-rendered com Jinja2 e estilo moderno. Inclui cadastro e controle de produtos, monitoramento de máquinas, emissão de etiquetas e dashboards.",
       technologies: ["Python", "FastAPI", "SQLite", "Jinja2"],
-      image: "/vectradex.jpg",
+      image: "/vectradeximage.jpg",
       link: "#",
       github: "https://github.com/FelipeHl-create/VectraDex"
     },
